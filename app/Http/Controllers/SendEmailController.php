@@ -11,12 +11,12 @@ class SendEmailController extends Controller
     public function envio(Request $request)
     {
 
-        $imagenes = [];
+        $images = [];
 
         foreach ($request->file('img') as $imagen) {
             $nombre = uniqid('img_').'.'.$imagen->getClientOriginalExtension();
             $imagen->storeAs('public/imgs', $nombre);
-            $imagenes[] = $nombre;
+            $images[] = $nombre;
         }
         
         $correo = new FormularioMailable(
@@ -27,7 +27,7 @@ class SendEmailController extends Controller
             $request->numint,
             $request->country,
             $request->description,
-            $imagenes,
+            $images,
         );
 
         Mail::to('al222111269@gmail.com')->send( $correo );

@@ -24,7 +24,7 @@ class FormularioMailable extends Mailable
         public $numint,
         public $country,
         public $description,
-        public $imagenes,
+        public $images,
     ){}
 
     /**
