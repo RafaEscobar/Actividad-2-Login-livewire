@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<div class="container mx-auto px-5 bg-cyan-50	">
-    <h1 class="text-3xl">Información de: {{$title}}</h1>
-    <div class="grid grid-cols-2 gap-2">
-        {{ $slot }}
-    </div>
-</div>
-=======
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,4 +16,3 @@
     
 </body>
 </html>
->>>>>>> ef26b227352f222c4761a7292dbcf18e0c1f1983
