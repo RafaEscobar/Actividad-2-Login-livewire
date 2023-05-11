@@ -1,5 +1,5 @@
 <div class="container mx-auto px-5 bg-cyan-50	">
-    <h1 class="text-3xl">Información de: {{$title}}</h1>
+    <h1 class="text-3xl">Información de: {{$name}}</h1>
     <div class="grid grid-cols-2 gap-2">
         <div class="m-8">
             <span class="font-semibold">Nombre: </span>

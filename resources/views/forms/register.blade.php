@@ -39,12 +39,12 @@
     
                     <div>
                         <label class="font-bold" for="">Imagen</label>
-                        <input class=" w-full" type="file" name="images[]" id="" >
+                        <input class=" w-full" type="file" name="images[]" id="" multiple>
                     </div>
     
                     <div>
                         <label class="font-bold" for="">Descripcion</label>
-                        <textarea class="shadow-2xl rounded-lg p-2 w-full" name="description" id="" required></textarea>
+                        <textarea class="shadow-2xl rounded-lg p-2 w-full" name="description" id=""></textarea>
                     </div>
     
                     <button type="submit">Enviar</button>
