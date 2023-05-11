@@ -13,7 +13,7 @@ class SendEmailController extends Controller
 
         $images = [];
 
-        foreach ($request->file('img') as $imagen) {
+        foreach ($request->file('images') as $imagen) {
             $nombre = uniqid('img_').'.'.$imagen->getClientOriginalExtension();
             $imagen->storeAs('public/imgs', $nombre);
             $images[] = $nombre;
@@ -29,7 +29,8 @@ class SendEmailController extends Controller
             $request->description,
             $images,
         );
-
         Mail::to('al222111269@gmail.com')->send( $correo );
+
+        dump("Enviado!!!");
     }
 }
