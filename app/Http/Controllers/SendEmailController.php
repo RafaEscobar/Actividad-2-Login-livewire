@@ -10,8 +10,14 @@ class SendEmailController extends Controller
 {
     public function envio(Request $request)
     {
-        $ruta = $request->img->store('public/imgs');
-        $ruta2 = str_replace('public/imgs/', '', $ruta);
+
+        $imagenes = [];
+
+        foreach ($request->file('img') as $imagen) {
+            $nombre = uniqid('img_').'.'.$imagen->getClientOriginalExtension();
+            $imagen->storeAs('public/imgs', $nombre);
+            $imagenes[] = $nombre;
+        }
         
         $correo = new FormularioMailable(
             $request->name,
@@ -21,8 +27,9 @@ class SendEmailController extends Controller
             $request->numint,
             $request->country,
             $request->description,
-            $request->img,
+            $imagenes,
         );
+
         Mail::to('al222111269@gmail.com')->send( $correo );
     }
 }
