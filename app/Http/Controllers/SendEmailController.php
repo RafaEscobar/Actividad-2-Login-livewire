@@ -29,7 +29,6 @@ class SendEmailController extends Controller
             $request->description,
             $images,
         );
-
         Mail::to('al222111269@gmail.com')->send( $correo );
     }
 }

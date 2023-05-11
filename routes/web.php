@@ -28,4 +28,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::post('enviar', [SendEmailController::class, 'envio']);
+Route::post('enviar', [SendEmailController::class, 'envio'])->name('enviar');
