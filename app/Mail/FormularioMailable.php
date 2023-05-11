@@ -17,13 +17,13 @@ class FormularioMailable extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        public $nombre,
-        public $calle,
-        public $codigop,
-        public $num_ext,
-        public $num_int,
-        public $pais,
-        public $descripcion,
+        public $name,
+        public $street,
+        public $code,
+        public $numext,
+        public $numint,
+        public $country,
+        public $description,
         public $img,
     ){}
 
